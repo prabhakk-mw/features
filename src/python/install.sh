@@ -903,9 +903,6 @@ if [ "${INSTALL_JUPYTERLAB}" = "true" ]; then
     fi
 
     INSTALL_UNDER_ROOT=true
-    if [ "$(id -u)" -eq 0 ] && [ "$USERNAME" != "root" ]; then
-        # INSTALL_UNDER_ROOT=false
-    fi
 
     install_user_package $INSTALL_UNDER_ROOT jupyterlab
     install_user_package $INSTALL_UNDER_ROOT jupyterlab-git
